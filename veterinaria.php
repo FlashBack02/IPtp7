@@ -32,13 +32,13 @@ function buscarPrimerMenorA($misMascotas, $edad){
     //STRING $menorM
     $i = 0;
     $cantMasc = count($misMascotas);
-    do{
-        $menorM = "-1";
+    $menorM = "-1";
+    while($menorM == "-1" && $i < $cantMasc){
         if($misMascotas[$i]['edad'] < $edad) {
             $menorM = $misMascotas[$i]['nombre'];
         }
         $i++;
-    } while($menorM == "-1" && $i < $cantMasc);
+    }
     return $menorM;
     
 }
